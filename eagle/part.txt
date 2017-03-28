@@ -1,0 +1,59 @@
+Partlist
+
+Exported from purple_v2.sch at 2/24/2017 10:30 PM
+
+EAGLE Version 8.0.0 Copyright (c) 1988-2017 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value           Device              Package              Library               Sheet
+
+ADC1     MCP3008-SO16    MCP3008-SO16        SO16                 adafruit              1
+ADC2     MCP3008-SO16    MCP3008-SO16        SO16                 adafruit              1
+C1       10pF            10PF-0603-50V-5%    0603                 SparkFun-Capacitors   1
+C2       0.1uF           CAPPTH              CAP-PTH-SMALL        SparkFun-Capacitors   1
+C3       47uF            CAP_POLPTH2         CPOL-RADIAL-10UF-25V SparkFun-Capacitors   1
+C4       33uF            CAP_POLPTH2         CPOL-RADIAL-10UF-25V SparkFun-Capacitors   1
+C5       10pF            10PF-0603-50V-5%    0603                 SparkFun-Capacitors   1
+D1       1N4148          DIODE1N4148         DIODE-1N4148         SparkFun-DiscreteSemi 1
+D2       High Power LED  LTE-302             LTE-302              SparkFun-LED          1
+D3       CLEAR           LED-RGB-CCCLEAR     LED-RGB-THRU         SparkFun-LED          1
+J1                       223                 2*23                 header                1
+J2                       223                 2*23                 header                1
+L1       33uH            INDUCTORRLB0912     RLB0912              SparkFun-Passives     1
+LED1                     LED5MM              LED5MM               adafruit              1
+LED2                     LED5MM              LED5MM               adafruit              1
+LED3                     LED5MM              LED5MM               adafruit              1
+LED4                     LED5MM              LED5MM               adafruit              1
+OP-AMP   TLC2274-SO14    TLC2274-SO14        SO14                 adafruit              1
+Q1       IRF520          IRF520              TO220BV              transistor-power      1
+Q2       MOSFET-PCHANNEL MOSFET-PCHANNEL     SOT23-3              User-Submitted        1
+Q3       MOSFET-PCHANNEL MOSFET-PCHANNEL     SOT23-3              User-Submitted        1
+Q4       MOSFET-PCHANNEL MOSFET-PCHANNEL     SOT23-3              User-Submitted        1
+Q5       MOSFET-PCHANNEL MOSFET-PCHANNEL     SOT23-3              User-Submitted        1
+R1       220K            0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R2       1K              0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R3       10K             0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R4       1K              0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R5       1M              0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R6       10K             0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R7       100             0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R8       100             0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R9       100             0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R11      220K            0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R12      1K              0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R13      10K             0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R14      1K              0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R15      400             0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R16      400             0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R17      100K            0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R18      100K            0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R19      400             0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R20      100K            0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R21      400             0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+R22      100K            0.3OHM-0805-1/8W-1% 0805                 SparkFun-Resistors    1
+RX_LED                   LED5MM              LED5MM               adafruit              1
+RX_PD                    LED5MM              LED5MM               adafruit              1
+U$1      ADS7883         ADS7883             SOT23-6              vlc                   1
+U5                       LT1301              DIL08                SparkFun-DigitalIC    1
+U9                       OPT101              OPT101               TCL272                1
