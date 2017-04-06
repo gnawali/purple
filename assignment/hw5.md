@@ -1,4 +1,4 @@
-# Purple v2.0 Get Started
+# Blink LED with Programmable Realtime Unit 
 This is to introduce the embedded visible light communication system based on BeagleBone Black (Rev. C). 
 
 ## What do you need to get started
@@ -49,6 +49,6 @@ the result. This shows the USB driver is successfully installed.
    * **For Mac and Linux Users**: By default, the OS should already have SSH installed. So you can open terminal and type the following command  `ssh machinekit@192.168.7.2`. The default password is `machinekit`.
    * **For Windows Users**: You need to configure Putty using the IP address `192.168.7.2`. You can following this [tutorial](https://mediatemple.net/community/products/dv/204404604/using-ssh-in-putty-) to configure the SSH connection in Putty.
 
-#(Blinking LED with Programmable Realtime Unit)
+
  
 
