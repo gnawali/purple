@@ -17,8 +17,8 @@ This is to introduce the embedded visible light communication system based on Be
 
 ## Software Preparation
 1. Installing the image:
-   * **Purple image**: 
-   * Download the [image](https://debian.beagleboard.org/images/bone-debian-8.6-lxqt-4gb-armhf-2016-11-06-4gb.img.xz)
+   - **Purple image**: 
+   - Download the [image](https://debian.beagleboard.org/images/bone-debian-8.6-lxqt-4gb-armhf-2016-11-06-4gb.img.xz)
    * After downloading the image, you need 7-zip to extract the img file. You can first download [7-zip](http://www.7-zip.org/download.html). Then right click on the image file with the 7zip option to extract here.
    * Install the image (.img file) on a micro SD card. You can following the [Raspberry Pi example](https://www.raspberrypi.org/documentation/installation/installing-images/). If you are using Windows, you can download [Win32Imager](https://sourceforge.net/projects/win32diskimager/) and install the application, and write the .img file to SD card. You may need a [USB-to-microSD adaptor](https://www.amazon.com/Sabrent-SuperSpeed-Windows-Certain-Android/dp/B00OJ5WBUE/ref=pd_lpo_147_bs_t_2?_encoding=UTF8&psc=1&refRID=QDRY01B5EGVBRQ0SWN4G) if the computer you are using does not have the SD card slot. It will approximately take 10-20 minutes to write the image to your microSD card depending on the speed of the CPU that is running on your computer.
    * Insert the SD card to BBB and plug in BBB board on your computer via the provided USB cable.
