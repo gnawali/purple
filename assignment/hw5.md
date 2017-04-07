@@ -65,15 +65,48 @@ This is to introduce the embedded visible light communication system based on Be
 ![reconnect<](images/reconnect.png)
 ![reconnect2<](images/reconnect2.png)
 
-   ```
-   config-pin -q P8_45
-   ```
    Now we can confirm that the HDMI is disabled.
    * **Setting up the PRU compiler**: The pru compiler should be installed by default the installed image.
 ![compiler<](images/compiler.png)
    ```
+   config-pin -q P8_45
    which clpru
    ```
+   We also need to set up the environment variable to make sure the Makefile in the following is makable. We want to put the environment variable in the `.bashrc` file so that the environment variable will be always valid. To do that, we open the `.bashrc` file under `/`.
+![export<](images/export.png)
+
+   ```
+   nano .bashrc
+   ```
+   Then we add the following two lines at the bottom of the file.
+![bashrc<](images/bashrc.png)
+   ```
+   export PRU_CGT=/usr/share/ti/cgt-pru
+   export PRU_SUPPORT=/opt/source/pru-software-support-package
+   ```
+   Once we added the environment variable, we reenter the shell via the following commands.
+![verifybash<](images/verifybash.png)
+   ```
+   exit
+   sudo -s
+   $PRU_CGT
+   ```
+   Then we create some hard link to ensure the make system can find right library under the right path.
+![linkpath<](images/linkpath.png)
+   ```
+   cd $PRU_CGT
+   mkdir -p bin
+   cd bin
+   ln -s `which clpru` .
+   ln -s `which lnkpru` .
+   ```
+   
+   * **Enabling remoteproc**: check whether remoteproc is already enabled.\
+![checkrproc<](images/checkrproc.png)
+   ```
+   lsmod | grep pru
+   ```
+   
    
    
    
