@@ -60,6 +60,21 @@ This is to introduce the embedded visible light communication system based on Be
    ```
    reboot
    ```
+   Logging into the board again and check whether hdmi is disable:
+   
+![reconnect<](images/reconnect.png)
+![reconnect2<](images/reconnect2.png)
+
+   ```
+   config-pin -q P8_45
+   ```
+   Now we can confirm that the HDMI is disabled.
+   * **Setting up the PRU compiler**: The pru compiler should be installed by default the installed image.
+![compiler<](images/compiler.png)
+   ```
+   which clpru
+   ```
+   
    
    
 
