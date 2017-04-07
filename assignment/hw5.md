@@ -106,12 +106,62 @@ This is to introduce the embedded visible light communication system based on Be
    ```
    lsmod | grep pru
    ```
+   Then we need to edit the device tree
+   ```
+   cd /opt/source/dtb-4.4-ti
+   nano src/arm/am335x-boneblack-emmc-overlay.dts
+   ```
+   and uncomment the following line
+   ```
+   /* #include "am33xx-pruss-rproc.dtsi" */ 
+   ```
+   to
+   ```
+   #include "am33xx-pruss-rproc.dtsi"
+   ```
+   Then
+   ```
+   make
+   make install
+   ```
+   Then blacklist and reboot
+   ```
+   echo "blacklist uio_pruss" > /etc/modprobe.d/pruss-blacklist.conf
+   reboot
+   ```
+   Check the remoteproc module again 
+   ```
+   lsmod | grep pru
+   ```
+![rproc<](images/rproc.png)
+   * ** Downloading BeagleScope Examples **: You need to connect the Ethenert cable to the BBB to make sure it is connected.
+   ```
+   ifconfig
+   ```
+ 	Then change the time on BBB so that the make will not have the problem of clock skew. Make sure you are running as root.
+   ```
+   sudo -s
+   dpkg-reconfigure tzdata (select your timezone)
+   ```
+   Create a folder to place all the examples.
+   ```
+   mkdir pru
+   ```
+   Download the repository:
+   ```
+   git clone  https://github.com/ZeekHuge/BeagleScope.git
+   ```
+   Go to the blink folder:
+   ```
+   cd BeagleScope/examples/firmware_exmples/pru_blinky
+   ```
+   Now blink the LED wired to P8_45:
+   ```
+   ./deploy.sh
+   ```
+   You need to hit enter to make the program compile. After that, the onboard RGB led will be blinked every 1 second.
+![blink<](images/blink.png)
    
-   
-   
-   
-
- 	
 2. Check on your PC/Desktop to see whether you have USB connections after you assembled all hardware.
    * **For Mac Users**: Type `option` + `space` key in your keyboard to open network preference, you will observe all operating connections. Click on the BeagleBone Black connection to see the IP address. Normally, this would be `192.168.7.1`. Once you confirmed with IP, you can connect to the board via SSH. 
    * **For Linux Users**: Open Terminal, and type `ifconfig` to see available network connections. You will observe the 
