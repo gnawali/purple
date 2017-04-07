@@ -29,7 +29,7 @@ This is to introduce the embedded visible light communication system based on Be
    * After you logged in to the board, you can following [this link](http://elinux.org/EBC_Exercise_30_PRU_via_remoteproc_and_RPMsg) to load PRU kernel modules. To sum up, it is really important for you to follow the sequence.
    * In order to make things easier, we type all commands using root. To change the user to root, simply type the following command in a
    teminal
-   [[/images/changetoRoom.PNG]]
+   [[images/changetoRoot.PNG]]
    ```
    sudo -s
    ```
