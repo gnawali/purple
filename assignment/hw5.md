@@ -34,7 +34,7 @@ This is to introduce the embedded visible light communication system based on Be
    sudo -s
    ```
 2. Enabling PRU module via Remoteproc framework:
-   * **Check version**: we need to make sure the board version is larger than 4.4.12-ti-r32 or the following instructions will be invalid.
+   * **Check version**: we need to make sure the board version is larger than 4.4.12-ti-r32 or the following instructions will be   invalid.
 ![version](images/version.png)
    ```
    cat ./ID.txt
@@ -45,7 +45,7 @@ This is to introduce the embedded visible light communication system based on Be
    ```
    config-pin -q P8_45
    ```
-   If the message was shown up in the terminal, we need to disable the HDMI. Open the `/boot/uEnv.txt`
+   If the message was shown up in the terminal, we need to disable the HDMI. Open the `/boot/uEnv.txt`.
 ![disableHDMI](images/disablehdmi.png)
    ```
    nano /boot/uEnv.txt
