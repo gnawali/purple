@@ -28,7 +28,8 @@ This is to introduce the embedded visible light communication system based on Be
      `ssh debian@192.168.7.2`
    * After you logged in to the board, you can following [this link](http://elinux.org/EBC_Exercise_30_PRU_via_remoteproc_and_RPMsg) to load PRU kernel modules. To sum up, it is really important for you to follow the sequence.
    * In order to make things easier, we type all commands using root. To change the user to root, simply type the following command in a
-   terminal ![teminal](images/changetoroot.png)
+   terminal.
+   ![teminal](images/changetoroot.png)
    ```
    sudo -s
    ```
@@ -40,17 +41,17 @@ This is to introduce the embedded visible light communication system based on Be
    uname -a
    ```
    * **Disable the HDMI**: The BBB provide multiplexing for the GPIOs, both PRU and HDMI will share the same GPIOs, so we have to disable the HDMI before we enable the PRU. How do we know whether the HDMI is disabled:
-   ![checkHDMI](image/checkhdmi.png)
+   ![checkHDMI](images/checkhdmi.png)
    ```
    config-pin -q P8_45
    ```
    If the message was shown up in the terminal, we need to disable the HDMI. Open the `/boot/uEnv.txt`
-   ![disableHDMI](image/disablehdmi.png)
+   ![disableHDMI](images/disablehdmi.png)
    ```
    nano /boot/uEnv.txt
    ```
    After uncommenting # in line number 10, we save the file and reboot.
-   ![root](image/reboot.png)
+   ![root](images/reboot.png)
    ```
    reboot
    ```
