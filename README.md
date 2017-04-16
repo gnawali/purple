@@ -2,7 +2,7 @@ This repository contains hardware and software for building practical Visible Li
 
 The hardware design is available in the eagle folder.
 
-![blink<](assignment/images/blink.png)
+![blink=](assignment/images/blink.png)
 
 The board has been used in research and education. In education, we have experience deploying PURPLE in networking, operating system, and architecture courses. Some of the assignments are availalbe in the assignment folder.
 
