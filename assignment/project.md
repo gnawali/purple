@@ -1,7 +1,7 @@
 # Project Description.
 In this project, students are going to build a simple LED-to-Photodiode communication system that can tranmsit "hello world"
 message from the tranmitter to the receiver. The overall data flow for this project is shown in the following figure.
-# What you will learning from this project.
+# What you will learn from this project.
 * Students will learn practical skills working under Linux Environment.
 * Students will learn basic Linux commands.
 * Students will learn how practical wireless communication system works.
