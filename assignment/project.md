@@ -1,4 +1,4 @@
-# Project Description.
+# Project Description (tentative).
 In this project, students are going to build a simple LED-to-Photodiode communication system that can transmit "hello world"
 message from the transmitter to the receiver. The overall data flow for this project is shown in the following figure.
 ![dataflow=](images/dataflow-vlc.jpg)
