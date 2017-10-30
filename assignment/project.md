@@ -1,7 +1,7 @@
 # Project Description.
 In this project, students are going to build a simple LED-to-Photodiode communication system that can transmit "hello world"
 message from the tranmitter to the receiver. The overall data flow for this project is shown in the following figure.
-![blink=](images/dataflow-vlc.jpg)
+![dataflow=](images/dataflow-vlc.jpg)
 * Apps: The apps is a userspace program that needs to send some information to PRU so that PRU can control the LED to send the uplayer information. For example, the userspace program in this project needs to read a file and send the file content to PRU. The file content is 
 "hello world".
 * CPU: The CPU is 1GHz ARMv7. It runs a debian Linux and it provides IPC mechanism to facilitate the communication between userspace program and kernel. So that it forwards the message from userspace to PRU with the help of kernel drivers. In this project, we will apply the latest framework suggested by TI to implement the messaging forwarding.
