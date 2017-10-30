@@ -20,5 +20,9 @@ message from the tranmitter to the receiver. The overall data flow for this proj
 * Students will learn how to encode and decode packets in PHY layer.
 * Students will learn how to compile and debug Assembly/C program under Linux.
 # What do you need to do in the project.
-
+1. Modify a C program that can be successfully compiled and run in PRU such that the PRU will run this program to send the message 
+with the onboard LED.
+2. Modify a C program that can be successfully compiled and run in PRU such that the PRU will run this program to receive the message
+with onboard Photodiode.
+3. Write a C program that is similar to previous examples to adapt the packet decoding under various number of LEDs (optional)?
 
