@@ -2,6 +2,8 @@
 
 This repository contains hardware and software for building practical Visible Light Communication system. The PURPLE board is a cape that works with BeagleBone Black embedded computer. With PURPLE, one can send and receive information using visible light.
 
+![blink](/docs/assignment/images/blink.png)
+
 The hardware design is available in the eagle folder.
 
 ### What's included ###
