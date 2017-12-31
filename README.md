@@ -110,12 +110,6 @@ You can specify the VALUE in makefile. Repeat Step 6-8 to see how it changes the
 
 Step 10: Congratulations. You've completed the VLC tutorial.
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
 ### Who do I talk to? ###
 
 * Shengrong Yin (syin@uh.edu) 
