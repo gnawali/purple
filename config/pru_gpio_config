@@ -1,0 +1,30 @@
+#  The following are a series of bash commands
+#  to set environment variables useful for
+#  PRU code development.
+
+#export PRU_CGT=/usr/share/ti/cgt-pru
+#export PRU=/home/debian/pru
+#export SLOTS=/sys/devices/platform/bone_capemgr
+
+#  The following use the "Universal IO" to configure
+#  the Beaglebone pins to required PRU modes.
+#  https://github.com/cdsteinkuehler/beaglebone-universal-io
+
+#echo univ-emmc > $SLOTS/slots 
+
+config-pin -a P8_39 pruout
+config-pin -q P8_39 
+config-pin -a P8_40 pruout
+config-pin -q P8_40
+config-pin -a P8_41 pruout
+config-pin -q P8_41
+config-pin -a P8_42 pruout
+config-pin -q P8_42
+
+
+config-pin P9.31 pruout
+config-pin P9.27 pruout
+config-pin P9.29 pruout
+config-pin P9.28 pruin
+config-pin P9.30 pruout
+
