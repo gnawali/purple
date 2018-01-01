@@ -52,8 +52,7 @@ The hardware design is available in the eagle folder.
     	- SD card
     	- Micro USB cable
     2. Software
-	    - BBB Driver[[Windows]](user_spac://learn.adafruit.com/ssh-to-beaglebone-black-over-usb/installing-drivers-windows)[[Mac]](https://learn.adafruit.com/ssh-to-beaglebone-black-over-usb/installing-drivers-mac)[[Linux]](https://learn.adafruit.com/ssh-to-beaglebone-black-over-usb/installing-drivers-linux)
-	    - [Ethcher](https://etcher.io/)
+	    - BBB Driver[[Windows]](https://learn.adafruit.com/ssh-to-beaglebone-black-over-usb/installing-drivers-windows)[[Mac]](https://learn.adafruit.com/ssh-to-beaglebone-black-over-usb/installing-drivers-mac)[[Linux]](https://learn.adafruit.com/ssh-to-beaglebone-black-over-usb/installing-drivers-linux)
 	    - SSH[[Windows]](https://learn.adafruit.com/ssh-to-beaglebone-black-over-usb/ssh-with-windows-and-putty)[[Mac/Linux]](https://learn.adafruit.com/ssh-to-beaglebone-black-over-usb/ssh-on-mac-and-linux) 
     3. Internet Connection (optional)
 	    - Ethernet Cable (Required physical access to the LAN port of your router/access point)
@@ -76,41 +75,49 @@ Step 3: SSH to the board. ssh debian@192.168.7.2
 ```
 ssh debian@192.168.7.2
 ```
+Step 4: When you login, Change to root.
 
-Step 4: Reload the pru remoteproc kernel module. 
+```
+sudo -s
 ```
 
+Step 5: Go to purple repository.
+
+```
+cd purple
+```
+
+Step 6: Reload the pru remoteproc kernel module.
+
+```
 rmmod pru_rproc
 
 modprobe pru_rproc
 
 ```
 
-Step 5: Configure GPIOs.
-```
-./config/pru_gpio_configure
-```
-
-Step 6: Compile the code and deploy from the repository.
+Step 7: Compile the code.
 ```
 make clean
 make
 ```
+Step 8: Make sure the code got compiled succesfully.
 
-Step 7: Start listening on incoming messages.
-``` 
-./example/receive
+Step 9: Start listening on incoming messages on one purple board.
+```
+cd example
+./receive
 ```
 
-Step 8: Open another SSH instance.
+Step 10: Start sending the messages on other purple board.
 ```
-./example/send
+cd example
+./send "hello world"
 ```
 
-Step 9: Modifying the data rate. 
-You can specify the VALUE in makefile. Repeat Step 6-8 to see how it changes the light.
+Step 11: Make sure the message got received correctly.
 
-Step 10: Congratulations. You've completed the VLC tutorial.
+Step 12: Congratulations. You've completed this short tutorial.
 
 ### Who do I talk to? ###
 
