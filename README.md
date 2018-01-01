@@ -10,8 +10,8 @@ The hardware design is available in the eagle folder.
 * Firmware running on PRU including both transmitter and receiver
 * User-space program to run on embedded Linux environment 
 * Hardware schematic
-* Partlist to assemble your own cape
-* PCB ordering
+* Partlist to assemble your own cape [Digi-Key](http://www.digikey.com/short/qq17qj)
+* PCB ordering [OSH Park](https://oshpark.com/shared_projects/B5KA0qL4)
 
 ### Contents ###
 
