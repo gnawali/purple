@@ -1,12 +1,4 @@
-//  pru0adc.c
-//  Attempt to duplicate Derek Molloy's
-//  SPI ADC read program in C from assembly.
-//  Chip Select:  P9.27 pr1_pru0_pru_r30_5
-//  MOSI:         P9.29 pr1_pru0_pru_r30_1
-//  MISO:         P9.28 pr1_pru0_pru_r31_3
-//  SPI CLK:      P9.30 pr1_pru0_pru_r30_2
-//  Sample Clock: P8.46 pr1_pru1_pru_r30_1  (testing only)
-//  Copyright (C) 2016  Gregory Raven
+
 //
 #include "resource_table_0.h"
 #include <am335x/pru_cfg.h>
@@ -88,11 +80,6 @@ int is_a_word(long * manchester_word, int number_of_symbols, unsigned int* temp_
 			if((*temp_detected_word) == SYNC_SYMBOL_MANCHESTER) return 2;
 			return 1;  
 		}
-//		else if(time_from_last_sync == 20)
-//		{
-//			(*detected_word) = ((*manchester_word) >> 2 ) & 0xffff;	
-//			return 1;
-//		}
 	}
 	return 0;
 }
@@ -272,15 +259,8 @@ int main(void) {
   unsigned char received_data;
   char * test_msg = "hello world";
   while (1) {
-    //while (!(*clockPointer == 7)) {
-    //  __delay_cycles(5);
-    //} //  Hold until the Master clock from PRU1 goes high.
-	//10kbps
     __delay_cycles(200);
-
-    //__delay_cycles(24500);
     read_adc();
-
     if(data >= THRESHOLD)
 	data = 1;
     else
@@ -293,32 +273,7 @@ int main(void) {
     else
 	symbol_level = 0;
     old_data = data;
-
-
-    //push data to userspace, we can't push data to userspace if the delay is two short. for example delay(200).
-    //The data can be used to debug the program in userspace. Normally we have to lower down the transmission speed 
-    //for debugging purpose.
-//    payload[dataCounter] = data;
-//    dataCounter = dataCounter + 1;
-//
-//    if (dataCounter == 245)
-//    {
-//        pru_rpmsg_send(&transport, dst, src, payload, 490);
-//        dataCounter = 0;
-//    }
-//
-//
-// 
-//    //detecting falling or rising edge.
-//    if((data - old_data) > THRESHOLD)
-//	symbol_level = 1;
-//    else if((old_data - data) > THRESHOLD)
-//	symbol_level = -1; 
-//    else
-//	symbol_level = 0;
-//    old_data = data;
-    
-
+	  
     //check whether there will be a falling or rising edge and save the edge. 
     if(symbol_level == 0 || symbol_level == old_symbol_level || (symbol_level != old_symbol_level && stable_samples < 2) )
     {
@@ -361,15 +316,6 @@ int main(void) {
 		frame_buffer[frame_size - 1] = '\0';
 		pru_rpmsg_send(&transport, dst, src, &frame_buffer[1], 490);
 	}
-       
-	//payload[dataCounter] = received_data;
-	//dataCounter = dataCounter + 1;
-//	if(dataCounter == 245)
-//        {
-//	    pru_rpmsg_send(&transport, dst, src, test_msg, 490);
-//            //pru_rpmsg_send(&transport, dst, src, payload, 490);
-//            dataCounter = 0;
-//        }
 
     }
   }
