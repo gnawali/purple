@@ -1,16 +1,4 @@
 //
-//  This program is free software: you can redistribute it and/or modify
-//  it under the terms of the GNU General Public License as published by
-//  the Free Software Foundation, either version 3 of the License, or
-//  (at your option) any later version.
-//
-//  This program is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//  GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "resource_table_1.h"
 #include <am335x/pru_cfg.h>
@@ -32,9 +20,7 @@ volatile register uint32_t __R31;
 #define PACKET_CNT  100000
 
 #define DELAY 4000 //25kHZ
-//#define DELAY 100000  //1kHz
-//#define PACKET_TIME 2*10*10*DELAY
-//#define INTERVAL  (PACKET_TIME + 10*10*DELAY)
+
 long packet_time = 0 ;
 long packet_interval = 0 ;
 
@@ -44,10 +30,6 @@ long packet_interval = 0 ;
 // Host-0 Interrupt sets bit 30 in register R31
 #define HOST_INT ((uint32_t)1 << 30)
 
-// The PRU-ICSS system events used for RPMsg are defined in the Linux device
-// tree
-// PRU0 uses system event 16 (To ARM) and 17 (From ARM)
-// PRU1 uses system event 18 (To ARM) and 19 (From ARM)
 #define TO_ARM_HOST 18
 #define FROM_ARM_HOST 19
 
@@ -140,8 +122,6 @@ int main(void) {
   while (!(*status & VIRTIO_CONFIG_S_DRIVER_OK))
     ;
 
-
-
   // Initialize the RPMsg transport structure.
   pru_rpmsg_init(&transport, &resourceTable.rpmsg_vring0,
                  &resourceTable.rpmsg_vring1, TO_ARM_HOST, FROM_ARM_HOST);
@@ -184,8 +164,8 @@ int main(void) {
   //  The sample clock is located at shared memory address 0x00010000.
   //  Need a pointer for this address.  This is found in the linker file.
   //  The address 0x0001_000 is PRU_SHAREDMEM.
-//  uint32_t *clockPointer = (uint32_t *)0x00010000;
-//  *clockPointer = 0; //  Clear this memory location.
+  //  uint32_t *clockPointer = (uint32_t *)0x00010000;
+  //  *clockPointer = 0; //  Clear this memory location.
 
 
         cpt = 0;
