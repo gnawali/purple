@@ -3,11 +3,9 @@ This is to introduce the embedded visible light communication system based on Be
 
 ## What do you need to get started
 * 2 x [BBB Rev.C ](https://beagleboard.org/black) 
-* 2 x [OpenVLC Cape](http://nsl.cs.uh.edu/~syin/openvlc/cape1.png)
+* 2 x [Purple VLC Cape](https://github.com/gnawali/purple/blob/master/docs/assignment/images/blink.png)
 * 2 x [mini USB cable](http://nsl.cs.uh.edu/~syin/openvlc/miniUSB.jpg)
 * 2 x [LED (Type 1)](http://www.vishay.com/docs/83178/tlcr5800.pdf)
-* 2 x [LED (Type 2)]
-* 2 x [Power Supply](http://elinux.org/images/7/72/DC_Supply.jpg).
 
 ## Hardware Assembly
 1. Attach the cape on top of BBB.
@@ -66,7 +64,7 @@ This is to introduce the embedded visible light communication system based on Be
 ![reconnect2<](images/reconnect2.png)
 
    Now we can confirm that the HDMI is disabled.
-   * **Setting up the PRU compiler**: The pru compiler should be installed by default the installed image.
+   * **Setting up the PRU compiler**: The pru compiler should be installed by default.
 ![compiler<](images/compiler.png)
    ```
    config-pin -q P8_45
@@ -151,11 +149,15 @@ This is to introduce the embedded visible light communication system based on Be
    ```
    git clone  https://github.com/ZeekHuge/BeagleScope.git
    ```
+   Create a symbolic link for the blink source code:
+   ```
+   ln -s `path to the blink source code` blink
+   ```
    Go to the blink folder:
    ```
-   cd BeagleScope/examples/firmware_exmples/pru_blinky
+   cd  blink
    ```
-   Now blink the LED wired to P8_45:
+   Now blink the LED wired to P8_45 (The script will configure and compile the program):
    ```
    ./deploy.sh
    ```
